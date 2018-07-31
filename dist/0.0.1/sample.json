@@ -1,0 +1,60 @@
+{
+    "data":
+    {
+        "brand":{
+            "brand_image":"http://localhost:8080/header/indian-express-logo.png",
+            "brand_link":"Indian Express Link",
+            "brand_name":"Indian Express"
+        },
+        "project_image": "http://localhost:8080/header/grit-logo.png",
+        "options":[
+            {
+                "text":"Option 1",
+                "link":"#"
+            },
+            {
+                "text":"Option 2",
+                "link":"#"
+            },
+            {
+                "text":"Option 3",
+                "link":"#"
+            },
+            {
+                "text":"Option 4",
+                "link":"#"
+            },
+            {
+                "text":"Option 5",
+                "link":"#"
+            }
+        ],
+        "social":{
+            "fb_link":"Fb Link",
+            "twitter_link":"Twitter Link",
+            "youtube_link":"Youtube Link"
+        },
+        "verticals":[
+            {
+                "text":"Vertical 1",
+                "link":"#"
+            },
+            {
+                "text":"Vertical 2",
+                "link":"#"
+            },
+            {
+                "text":"Vertical 3",
+                "link":"#"
+            },
+            {
+                "text":"Vertical 4",
+                "link":"#"
+            },
+            {
+                "text":"Vertical 5",
+                "link":"#"
+            }
+        ]
+    }
+}

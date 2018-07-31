@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://example.com/example.json",
+  "properties": {
+    "data": {
+      "id": "/properties/data",
+      "properties": {
+        "verticals":{
+          "type":"array",
+          "title":"Verticals",
+          "id":"/properties/data/verticals",
+          "items":{
+            "type":"object",
+            "title":"Vertical",
+            "id":"/properties/data/verticals/items",
+            "properties": {
+              "text":{
+                "type":"string",
+                "id":"/properties/data/verticals/items/text",
+                "title":"Vertical Text"
+              },
+              "link":{
+                "type":"string",
+                "format":"uri",
+                "id":"/properties/data/verticals/items/link",
+                "title":"Vertical Link"
+              }
+            }
+          }
+        },
+        "project_image":{
+          "type":"string",
+          "format":"uri",
+          "title":"Project Image"
+        },
+        "options":{
+          "type":"array",
+          "title":"Options",
+          "id": "/properties/data/options",
+          "items":{
+            "type":"object",
+            "id": "/properties/data/options/items",
+            "title":"Option",
+            "properties": {
+              "text":{
+                "type":"string",
+                "title":"Option Text",
+                "id": "/properties/data/options/items/text"
+              },
+              "link":{
+                "type":"string",
+                "format":"uri",
+                "title":"Option Link",
+                "id": "/properties/data/options/items/link"
+              }
+            }
+          }
+        },
+        "brand":{
+          "type":"object",
+          "properties": {
+            "brand_image":{
+              "type":"string",
+              "format":"uri",
+              "title":"Header Image"
+            },
+            "brand_name":{
+              "type":"string",
+              "title":"Brand Name"
+            },
+            "brand_link":{
+              "type":"string",
+              "title":"Brand Link",
+              "format":"uri"
+            }
+          },
+          "title":"Brand"
+        },
+        "social":{
+          "type":"object",
+          "properties": {
+            "fb_link":{
+              "type":"string",
+              "format":"uri",
+              "title":"Facebook Link"
+            },
+            "twitter_link":{
+              "type":"string",
+              "title":"Twitter Link",
+              "format":"uri"
+            },
+            "youtube_link":{
+              "type":"string",
+              "title":"Youtube Link",
+              "format":"uri"
+            }
+          },
+          "title":"Brand"
+        }
+      },
+      "title":"Card Data",
+      "type": "object"
+    }
+  },
+  "type": "object"
+}
