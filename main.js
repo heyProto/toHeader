@@ -1,43 +1,43 @@
 import React from 'react';
 import {render, hydrate} from 'react-dom';
-import CoverStoryCard from './src/js/Container.jsx';
+import Card from './src/js/Container.jsx';
 
 window.ProtoGraph = window.ProtoGraph || {};
 window.ProtoGraph.Card = window.ProtoGraph.Card || {};
 
-ProtoGraph.Card.toCoverStory = function () {
-  this.cardType = 'toCoverStoryCard';
+ProtoGraph.Card.toCard = function () {
+  this.cardType = 'toCard';
 }
 
-ProtoGraph.Card.toCoverStory.prototype.init = function (options) {
+ProtoGraph.Card.toCard.prototype.init = function (options) {
   this.options = options;
 }
 
-ProtoGraph.Card.toCoverStory.prototype.getData = function (data) {
+ProtoGraph.Card.toCard.prototype.getData = function (data) {
   return this.containerInstance.exportData();
 }
 
-ProtoGraph.Card.toCoverStory.prototype.renderSection= function (data) {
+ProtoGraph.Card.toCard.prototype.renderSection= function (data) {
   this.mode = 'section';
   this.render();
 }
 
-ProtoGraph.Card.toCoverStory.prototype.renderArticle= function (data) {
+ProtoGraph.Card.toCard.prototype.renderArticle= function (data) {
   this.mode = 'article';
   this.render();
 }
 
-ProtoGraph.Card.toCoverStory.prototype.render = function () {
+ProtoGraph.Card.toCard.prototype.render = function () {
   if (this.options.isFromSSR){
     hydrate(
-      <CoverStoryCard
+      <Card
         mode={this.mode}
         dataJSON={this.options.initialState.dataJSON}
       />,
       this.options.selector);
   } else {
     render(
-      <CoverStoryCard
+      <Card
         dataURL={this.options.data_url}
         selector={this.options.selector}
         domain={this.options.domain}

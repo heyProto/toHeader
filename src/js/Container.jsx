@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import ta from 'time-ago';
-export default class toCoverStoryCard extends React.Component {
+
+export default class toCard extends React.Component {
   constructor(props) {
     super(props)
     let stateVar = {
@@ -113,16 +113,16 @@ export default class toCoverStoryCard extends React.Component {
           <div className="pro-container">
             <div className="pro-menubar">
               {data.project_image && <div className="project-name-icon"><img src={data.project_image} height="24px"></img></div>}
-              {data.social && data.social.fb_link && <div className="social-icon"><a href={data.social.fb_link}><img src="fb-icon.png" height="30px"></img></a></div>}
-              {data.social && data.social.twitter_link && <div className="social-icon"><a href={data.social.twitter_link}><img src="twitter-icon.png" height="30px"></img></a></div>}
-              {data.social && data.social.youtube_link && <div className="social-icon"><a href={data.social.youtube_link}><img src="youtube-icon.png" height="30px"></img></a></div>}
+              {data.social && data.social.fb_link && <div className="social-icon"><a href={data.social.fb_link}><img src="https://cdn.protograph.pykih.com/lib/fb-black-icon.png" height="30px"></img></a></div>}
+              {data.social && data.social.twitter_link && <div className="social-icon"><a href={data.social.twitter_link}><img src="https://cdn.protograph.pykih.com/lib/twitter-black-icon.png" height="30px"></img></a></div>}
+              {data.social && data.social.youtube_link && <div className="social-icon"><a href={data.social.youtube_link}><img src="https://cdn.protograph.pykih.com/lib/youtube-black-icon.png" height="30px"></img></a></div>}
               <div className="menu-options">
                 {options && options.map((o,i)=>{
                   return(
                     <a key={`option-${i}`} href={o.link}>{o.text}</a>
                   )
                 })}
-                <a href="" className="more-option">More <img src="down-arrow-icon.png"></img></a>
+                <a href="" className="more-option">More <img src="https://cdn.protograph.pykih.com/lib/down-arrow-black-icon.png"></img></a>
               </div>
             </div>
           </div>

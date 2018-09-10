@@ -1,1 +1,1 @@
-# ProtoGraph.Card.toCoverStory
+# ProtoGraph.Card.toHeader

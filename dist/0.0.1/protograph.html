@@ -3,14 +3,14 @@
   <head>
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toCoverStory</title>
+    <title>toCard</title>
     <link rel="stylesheet" type="text/css" href="card.min.css">
   </head>
   <body>
     <div id="article-div"></div></br>
     <script src="card.min.js"></script>
     <script type="text/javascript">
-      var x = new ProtoGraph.Card.toCoverStory();
+      var x = new ProtoGraph.Card.toCard();
       window.ref_link_sources_url = "https://cdn.protograph.pykih.com/Assets/ref_link_sources.json"
       function findGetParameter(parameterName) {
           var result = null,
@@ -41,7 +41,8 @@
           domain: domain_name,
           site_config_url: base_url + '/header.json'
         })
-        renderWithMode(mode);
+        //renderWithMode(mode);
+        x.render();
       }
 
       function renderWithMode(mode) {
@@ -49,20 +50,11 @@
           case 'col16':
             x.renderSixteenCol();
             break;
-          case 'col7':
-            x.renderSevenCol();
-            break;
           case 'col4':
             x.renderFourCol();
             break;
-          case 'col3':
-            x.renderThreeCol();
-            break;
-          case 'col2':
-            x.renderTwoCol();
-            break;
           default:
-            x.renderSevenCol();
+            x.renderSixteenCol();
             break;
         }
       }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import CoverStoryCard from './src/js/Container.jsx'
+import Card from './src/js/Container.jsx'
 
 global.window = {}
 
@@ -17,7 +17,7 @@ function renderWithMode(mode) {
 
 // function getScriptString(mode, dataJSON, selector, site_configs) {
 //     return `<script>
-//             var x = new ProtoGraph.Card.toCoverStory(),
+//             var x = new ProtoGraph.Card.toCard(),
 //                 params = {
 //                     "selector": document.querySelector('${selector}'),
 //                     "isFromSSR": true,
@@ -32,7 +32,7 @@ function renderWithMode(mode) {
 
 function render(initialState, mode) {
     let content = renderToString(
-        <CoverStoryCard
+        <Card
             dataJSON={initialState.dataJSON}
             mode={mode}
             renderingSSR={true}
@@ -45,5 +45,5 @@ function render(initialState, mode) {
 module.exports = {
     render: render,
     // getScriptString: getScriptString
-    instance: 'toCoverStory'
+    instance: 'toHeader'
 }
