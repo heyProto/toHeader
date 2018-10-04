@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from './Container.jsx';
 import JSONSchemaForm from '../../lib/js/react-jsonschema-form';
 
-export default class EditStoryCard extends React.Component {
+export default class EditCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
